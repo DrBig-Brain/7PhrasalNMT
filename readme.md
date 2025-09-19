@@ -1,6 +1,6 @@
 # 7PhrasalNMT
 
-A neural machine translation (NMT) project focused on phrasal parsing in Vietnamese translation. This repository implements a character-level Transformer model for text translation, with custom preprocessing and training scripts.
+A neural machine translation (NMT) project focused on phrasal parsing in English-Hindi translation. This repository implements a character-level Transformer model for text translation, with custom preprocessing and training scripts.
 
 ## Features
 - Character-level Transformer architecture for NMT
@@ -30,7 +30,7 @@ A neural machine translation (NMT) project focused on phrasal parsing in Vietnam
    ```
    *(Create `requirements.txt` if not present, based on your environment)*
 3. **Prepare your data:**
-   - Place your dataset in the appropriate format as expected by `char_phrase_dataset.py` and `preprocessing.py`.
+   - Place your parallel English-Hindi dataset in the appropriate format as expected by `char_phrase_dataset.py` and `preprocessing.py`.
 4. **Train the model:**
    ```bash
    python trainer.py
@@ -40,7 +40,7 @@ A neural machine translation (NMT) project focused on phrasal parsing in Vietnam
 
 ## Usage
 - Modify `trainer.py` and `transformer.py` to adjust model parameters or training settings.
-- Use `preprocessing.py` for custom data cleaning and preparation.
+- Use `preprocessing.py` for custom data cleaning and preparation. By default, phrase extraction is performed on English sentences.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
