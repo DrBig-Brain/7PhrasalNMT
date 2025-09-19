@@ -24,7 +24,7 @@ class Trainer:
             x, y, p = x.to(self.config.device), y.to(self.config.device), p.to(self.config.device)
             tgt_in = y[:, :-1]
             tgt_out = y[:, 1:]
-            out = self.model(x, tgt_in, p, p)
+            out = self.model(x, tgt_in, p, p[:, :-1])
             loss = self.criterion(out.reshape(-1, out.size(-1)), tgt_out.reshape(-1))
             self.optimizer.zero_grad()
             loss.backward()
